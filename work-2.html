@@ -14,12 +14,15 @@
 <script>
   const root = document.getElementById('root');
   
-  const h1Component = ()=>{
-    return `<h1>hello world</h1>`
+  const Component = (tagType,textNode)=>{
+    return `<${tagType}>${textNode}</${tagType}>`
   };
 
   const app = ()=>{
-    return `${h1Component()}`;
+    return `
+      ${Component('p','안녕')}
+    `
+    ;
   };
 
   const renderer = ()=>{
@@ -28,7 +31,6 @@
 
   renderer()
 
-  
 </script>
 
 </html>
