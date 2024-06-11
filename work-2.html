@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>work-2</title>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+</body>
+
+<script>
+  const root = document.getElementById('root');
+  
+  const Component = (tagType,textNode)=>{
+    return `<${tagType}>${textNode}</${tagType}>`
+  };
+
+  const app = ()=>{
+    return `
+      ${Component('p','안녕')}
+    `
+    ;
+  };
+
+  const renderer = ()=>{
+    root.innerHTML = app()
+  }
+
+  renderer()
+
+</script>
+
+</html>
